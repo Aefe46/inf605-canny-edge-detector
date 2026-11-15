@@ -5,3 +5,6 @@ __pycache__/
 venv/
 .DS_Store
 Thumbs.db
+
+# raporlar Drive uzerinden teslim ediliyor
+docs/

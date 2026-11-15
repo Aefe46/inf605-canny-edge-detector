@@ -20,8 +20,9 @@ Canny'nin üç ölçütü (iyi tespit, iyi konumlama, tek yanıt) sunumda türet
 ## Klasörler
 
 ```
-notebooks/         Ana Jupyter notebook
-images/            Test görüntüleri
+src/               Algoritma modülleri (gaussian.py, ...)
+notebooks/         Ana Jupyter notebook (canny.ipynb)
+images/            Test görüntüleri (cameraman, coins: skimage.data)
 requirements.txt   Gerekli paketler
 ```
 
