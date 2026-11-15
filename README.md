@@ -1,8 +1,10 @@
-# INF605 · Grup 10 · Canny Kenar Dedektörü
+# Canny Kenar Dedektörü
 
-John Canny'nin 1986'da yayımladığı kenar tespiti yöntemini Python ile sıfırdan yazıyoruz. Amacımız, bir görüntüdeki kenarları hem doğru bulan hem de tek piksel kalınlığında veren bu klasik algoritmayı adım adım kurmak ve sonuçlarını OpenCV'nin hazır sürümüyle karşılaştırmak.
+INF605 Görüntü İşleme dersi, Grup 10 projesi.
 
-**Makale:** J. Canny, "A computational approach to edge detection," *IEEE TPAMI*, vol. PAMI-8, no. 6, pp. 679–698, 1986. [doi:10.1109/TPAMI.1986.4767851](https://doi.org/10.1109/TPAMI.1986.4767851)
+Bu projede John Canny'nin 1986'da yayımladığı kenar bulma yöntemini Python ile yazıyoruz. Algoritmayı adım adım kurup sonuçlarımızı OpenCV'deki `cv2.Canny` ile karşılaştıracağız.
+
+Makale: J. Canny, "A computational approach to edge detection," IEEE TPAMI, vol. PAMI-8, no. 6, pp. 679-698, 1986. [doi:10.1109/TPAMI.1986.4767851](https://doi.org/10.1109/TPAMI.1986.4767851)
 
 ## Yöntemin adımları
 
@@ -12,10 +14,6 @@ John Canny'nin 1986'da yayımladığı kenar tespiti yöntemini Python ile sıf�
 | 2 | Gradyan hesabı | Her pikselde kenarın şiddetini ve yönünü bulur |
 | 3 | Non-maximum suppression | Kalın kenarları tek piksel genişliğe inceltir |
 | 4 | Histerezis eşikleme | İki eşikle güçlü kenarları tutar, zayıfları bağlantıya göre ekler |
-
-Canny'nin üç ölçütü (iyi tespit, iyi konumlama, tek yanıt) sunumda türetmeleri olmadan anlatılacak.
-
-`cv2.Canny` yalnızca kendi sonuçlarımızı karşılaştırmak için kullanılacak. Yöntemin adımlarını hazır fonksiyonlarla değil, NumPy/SciPy ile kendimiz yazıyoruz.
 
 ## Klasörler
 
