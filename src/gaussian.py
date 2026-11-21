@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 
 
-def goruntu_yukle(dosya_yolu):
+def load_image(dosya_yolu):
     img = cv2.imread(str(dosya_yolu))
 
     if img is None:
@@ -17,7 +17,7 @@ def goruntu_yukle(dosya_yolu):
     return img
 
 
-def gauss_kernel(sigma):
+def gaussian_kernel(sigma):
     if sigma <= 0:
         raise ValueError("sigma pozitif olmalı")
 
@@ -38,11 +38,11 @@ def gauss_kernel(sigma):
     return kernel
 
 
-def gauss_yumusat(img, sigma):
+def gaussian_smooth(img, sigma):
     if len(img.shape) != 2:
         raise ValueError("gri tonlamalı görüntü bekleniyor")
 
-    kernel = gauss_kernel(sigma)
+    kernel = gaussian_kernel(sigma)
     img_float = img.astype(np.float64)
 
     # kenarlarda görüntüyü aynalıyoruz, böylece boyut değişmiyor
